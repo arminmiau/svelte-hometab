@@ -14,7 +14,7 @@
     iconFileName="github.png"
   />
   <Shortcut
-    shortcutUrl="vscode://file/C:/Users/Armin/hometab"
+    shortcutUrl="vscode://file/C:/Users/Armin/svelte-hometab"
     shortcutName="Hometab"
     iconFileName="vscode.png"
   />

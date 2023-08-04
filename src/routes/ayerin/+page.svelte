@@ -14,13 +14,8 @@
     iconFileName="twitch.png"
   />
   <Shortcut
-    shortcutUrl="https://studio.youtube.com/channel/UCkLfsduIbVWvWq9fVy7MvYA"
-    shortcutName="Ayerin"
-    iconFileName="ytstudio.png"
-  />
-  <Shortcut
-    shortcutUrl="https://studio.youtube.com/channel/UCinMWuz0OX2tB7UoJlneeWw"
-    shortcutName="AyerinsLight"
+    shortcutUrl="https://studio.youtube.com/"
+    shortcutName="YT Studio"
     iconFileName="ytstudio.png"
   />
 </div>
