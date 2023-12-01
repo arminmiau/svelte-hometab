@@ -9,4 +9,10 @@ declare global {
   }
 }
 
+type Email = {
+  url: string;
+  iconPath: string;
+  iconAlt: string;
+}
+
 export {};

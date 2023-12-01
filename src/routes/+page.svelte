@@ -30,6 +30,12 @@
     shortcutName="Steam"
     iconFileName="steam.png"
   />
+  <Shortcut
+    shortcutUrl="ttps://monkeytype.com/"
+    shortcutName="monkeytype"
+    iconFileName="monkeytype.png"
+    style="width: 126px !important; height: 80px !important"
+  />
 </div>
 
 <style>

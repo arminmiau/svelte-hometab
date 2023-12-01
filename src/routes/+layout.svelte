@@ -1,6 +1,9 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
+  import Inbox from '../components/Inbox.svelte';
+  import emails from "$lib/emails.json";
+
   $: path = $page.url.pathname;
 
   let time = new Date();
@@ -11,7 +14,7 @@
   let searchString = '';
   function search() {
     if (searchString === '') return;
-    window.location.assign('https://www.duckduckgo.com/?q=' + searchString);
+    window.location.assign('https://www.duckduckgo.com/?q=' + encodeURI(searchString));
   }
 
   let searchInput: HTMLInputElement;
@@ -19,33 +22,9 @@
 </script>
 
 <div class="inbox">
-  <a
-    style="border-radius: 0 25% 0 0"
-    href="https://mail.google.com/mail/u/0/#inbox"
-    class="inbox-link"
-    ><img alt="mailAB" src="/img/mailAB.png" class="inbox-icon" /></a
-  >
-  <a href="https://mail.google.com/mail/u/1/#inbox" class="inbox-link"
-    ><img alt="mailAM" src="/img/mailAM.png" class="inbox-icon" /></a
-  >
-  <a href="https://mail.google.com/mail/u/2/#inbox" class="inbox-link"
-    ><img alt="mailCC" src="/img/mailCC.png" class="inbox-icon" /></a
-  >
-  <a href="https://mail.google.com/mail/u/3/#inbox" class="inbox-link"
-    ><img alt="mailA2" src="/img/mailA2.png" class="inbox-icon" /></a
-  >
-  <a href="https://mail.google.com/mail/u/4/#inbox" class="inbox-link"
-    ><img alt="mailA3" src="/img/mailA3.png" class="inbox-icon" /></a
-  >
-  <a href="https://mail.google.com/mail/u/5/#inbox" class="inbox-link"
-    ><img alt="mailCCS" src="/img/mailCCS.png" class="inbox-icon" /></a
-  >
-  <a
-    style="border-radius: 0 0 25% 0"
-    href="https://outlook.office.com/mail/inbox"
-    class="inbox-link"
-    ><img alt="outlookAB" src="/img/outlookAB.png" class="inbox-icon" /></a
-  >
+  {#each emails as email} 
+    <Inbox email={email} />
+  {/each}
 </div>
 <div class="center">
   <form on:submit={search}>
@@ -105,22 +84,6 @@
     top: 0;
     left: 0;
     height: 100%;
-  }
-  .inbox-link {
-    display: inline-block;
-    padding: 10px 10px;
-    text-decoration: none;
-    color: #eeeeee;
-    font-weight: 300;
-    height: 32px;
-    background: #222222;
-  }
-  .inbox-link:hover {
-    background: rgba(255, 255, 255, 0.05);
-  }
-  .inbox-icon {
-    width: 32px;
-    height: 32px;
   }
   a {
     color: #00b7ff;
