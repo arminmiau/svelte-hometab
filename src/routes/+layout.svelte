@@ -11,7 +11,9 @@
   let searchString = '';
   function search() {
     if (searchString === '') return;
-    window.location.assign('https://www.duckduckgo.com/?q=' + searchString);
+    window.location.assign(
+      'https://www.duckduckgo.com/?q=' + encodeURIComponent(searchString)
+    );
   }
 
   let searchInput: HTMLInputElement;
@@ -77,14 +79,14 @@
   </h1>
 </div>
 <nav>
-  <a href="/" class={path === '/' ? 'nav-link-active' : ''}>Home</a>
-  <a href="/school" class={path === '/school' ? 'nav-link-active' : ''}
-    >School</a
-  >
-  <a href="/dev" class={path === '/dev' ? 'nav-link-active' : ''}>Dev</a>
-  <a href="/ayerin" class={path === '/ayerin' ? 'nav-link-active' : ''}
-    >Ayerin</a
-  >
+  <a href="/" class={path === '/' ? 'nav-link-active' : ''}> Home </a>
+  <a href="/school" class={path === '/school' ? 'nav-link-active' : ''}>
+    School
+  </a>
+  <a href="/dev" class={path === '/dev' ? 'nav-link-active' : ''}> Dev </a>
+  <a href="/ayerin" class={path === '/ayerin' ? 'nav-link-active' : ''}>
+    Ayerin
+  </a>
 </nav>
 
 <slot />

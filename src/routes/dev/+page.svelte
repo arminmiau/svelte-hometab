@@ -14,8 +14,13 @@
     iconFileName="github.png"
   />
   <Shortcut
+    shortcutUrl="https://github.com/orgs/Ayerins-Hammer/repositories"
+    shortcutName="Ayerin's Hammer"
+    iconFileName="github.png"
+  />
+  <Shortcut
     shortcutUrl="vscode://file/C:/Users/Armin/svelte-hometab"
-    shortcutName="Hometab"
+    shortcutName="svelte-hometab"
     iconFileName="vscode.png"
   />
 </div>

@@ -14,7 +14,7 @@
     iconFileName="webuntis.png"
   />
   <Shortcut
-    shortcutUrl="https://www.eduvidual.at/"
+    shortcutUrl="https://www.eduvidual.at/local/eduvidual/pages/redirects/login_oauth.php?issuer=Microsoft"
     shortcutName="Eduvidual"
     iconFileName="eduvidual.png"
   />
