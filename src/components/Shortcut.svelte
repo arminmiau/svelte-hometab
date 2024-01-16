@@ -2,11 +2,11 @@
   export let shortcutUrl: string;
   export let shortcutName: string;
   export let iconFileName: string;
-  export let style = "";
+  export let style = '';
 </script>
 
 <a href={shortcutUrl}>
-  <img style={style} alt={iconFileName} class="link-icon" src="/img/{iconFileName}" />
+  <img {style} alt={iconFileName} class="link-icon" src="/img/{iconFileName}" />
   <p class="link-text">{@html shortcutName}</p>
 </a>
 
@@ -26,5 +26,8 @@
     text-align: center;
     margin: 0px 5px 0px 5px;
     font-size: 16px;
+
+    width: 80px;
+    overflow-wrap: break-word;
   }
 </style>

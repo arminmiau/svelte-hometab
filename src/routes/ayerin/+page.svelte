@@ -5,12 +5,12 @@
 <div>
   <Shortcut
     shortcutUrl="https://dashboard.twitch.tv/u/ayerinslight/stream-manager"
-    shortcutName="Stream<br />Manager"
+    shortcutName="Stream Manager"
     iconFileName="twitch.png"
   />
   <Shortcut
     shortcutUrl="https://dashboard.twitch.tv/u/ayerinslight/content/video-producer"
-    shortcutName="Video<br />Producer"
+    shortcutName="Video Producer"
     iconFileName="twitch.png"
   />
   <Shortcut
