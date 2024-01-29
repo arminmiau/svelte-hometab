@@ -7,17 +7,18 @@
   $: path = $page.url.pathname;
 
   let time = new Date();
-  setInterval(function () {
+  setInterval(() => {
     time = new Date();
   }, 100);
 
   let searchString = '';
-  function search() {
+  const search = () => {
     if (searchString === '') return;
+
     window.location.assign(
       'https://www.duckduckgo.com/?q=' + encodeURIComponent(searchString)
     );
-  }
+  };
 
   let searchInput: HTMLInputElement;
   onMount(() => searchInput.focus());

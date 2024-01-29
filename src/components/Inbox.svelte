@@ -1,13 +1,13 @@
 <script lang="ts">
-    export let email: Email;
+  export let email: App.Email;
 </script>
 
 <a href={email.url} class="inbox-link">
-    <img alt={email.iconAlt} src={email.iconPath} class="inbox-icon" />
+  <img alt={email.iconAlt} src={email.iconPath} class="inbox-icon" />
 </a>
 
 <style>
-    .inbox-link {
+  .inbox-link {
     display: inline-block;
     padding: 10px 10px;
     text-decoration: none;

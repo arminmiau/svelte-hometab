@@ -6,13 +6,12 @@ declare global {
     // interface Locals {}
     // interface PageData {}
     // interface Platform {}
+    type Email = {
+      url: string;
+      iconPath: string;
+      iconAlt: string;
+    };
   }
-}
-
-type Email = {
-  url: string;
-  iconPath: string;
-  iconAlt: string;
 }
 
 export {};
